@@ -115,14 +115,12 @@
                     </p>
                 </div>
             </div>
-            {% for category in goods %}
+            {% for category, products_list in goods.items() %}
             <div class="row">
                 <div class="col-12 section-title text-center mb-5">
                     <h2 class="d-block">{{category}}</h2>
                 </div>
-                {% for products_list in goods.values() %}
                 {% for product in products_list %}
-<!--                {% if product.Категория == category %}-->
                 <div class="col-lg-4 mb-5 col-md-6">
                     <div class="wine_v_1 text-center pb-4 pt-5">
                         <img src="images/{{product.Картинка}}" alt="Image" class="img-fluid">
@@ -141,8 +139,6 @@
                         </div>
                     </div>
                 </div>
-<!--                {% endif %}-->
-                {% endfor %}
                 {% endfor %}
             </div>
             {% endfor %}
