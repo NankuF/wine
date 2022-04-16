@@ -26,10 +26,10 @@ env = Environment(
 
 template = env.get_template('template.html')
 
-date_create_company = datetime.date(year=1920, month=1, day=1)
-delta = (datetime.date.today() - date_create_company).days // 365
+date_create_company = 1920
+age_company = (datetime.datetime.now().year - date_create_company)
 
-rendered_page = template.render(goods=grouped_products, years=delta)
+rendered_page = template.render(goods=grouped_products, age_company=age_company)
 
 with open('index.html', 'w', encoding="utf8") as file:
     file.write(rendered_page)
