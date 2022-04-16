@@ -5,10 +5,10 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-excel_wines = pd.read_excel('wine3.xlsx', na_values=None, keep_default_na=False).to_dict(orient='records')
+products = pd.read_excel('wine3.xlsx', na_values=None, keep_default_na=False).to_dict(orient='records')
 
 grouped_products = collections.defaultdict(list)
-for product in excel_wines:
+for product in products:
     grouped_products[product['Категория']].append(product)
 
 env = Environment(
