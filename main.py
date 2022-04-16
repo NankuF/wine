@@ -16,23 +16,19 @@ def main():
         products = pd.read_excel(path_to_excel, na_values=None, keep_default_na=False).to_dict(orient='records')
     except ValueError:
         raise ValueError('Файл должен быть в формате Excel')
-
     grouped_products = collections.defaultdict(list)
     for product in products:
         grouped_products[product['Категория']].append(product)
+
+    company_foundation_year = 1920
+    company_age = datetime.datetime.now().year - company_foundation_year
 
     env = Environment(
         loader=FileSystemLoader('.'),
         autoescape=select_autoescape(['html', 'xml'])
     )
-
     template = env.get_template('template.html')
-
-    date_create_company = 1920
-    age_company = (datetime.datetime.now().year - date_create_company)
-
-    rendered_page = template.render(goods=grouped_products, age_company=age_company)
-
+    rendered_page = template.render(goods=grouped_products, company_age=company_age)
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
 
