@@ -25,7 +25,6 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
 <div class="site-wrap">
 
     <div class="site-mobile-menu site-navbar-target">
@@ -128,7 +127,8 @@
                     <div class="wine_v_1 text-center pb-4 pt-5">
                         <img src="images/{{product.Картинка}}" alt="Image" class="img-fluid">
                         {% if product.Акция %}
-                        <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
+                        <img src="assets/profitable.png"
+                             style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
                         {% endif %}
                         <div>
                             <h3 class="heading mt-3 mb-3 text-dark">{{product.Название}}</h3>
@@ -254,6 +254,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 
