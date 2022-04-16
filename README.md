@@ -14,6 +14,10 @@ export PATH_TO_EXCEL=wine.xlsx
 ``` 
 - либо создайте файл `.env` в корне проекта и поместите в него `PATH_TO_EXCEL=wine.xlsx`
 #### Пример файла wine.xlsx cмотрите в репозитории
+- Установите зависимости
+```bash
+pip install -r requirements.txt 
+```
 - Запустите сайт командой<br>
 ```python
 python main.py
