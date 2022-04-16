@@ -13,12 +13,15 @@ git clone https://github.com/NankuF/wine.git
 export PATH_TO_EXCEL=wine.xlsx
 ``` 
 - либо создайте файл `.env` в корне проекта и поместите в него `PATH_TO_EXCEL=wine.xlsx`
+#### Пример файла wine.xlsx cмотрите в репозитории
 - Запустите сайт командой<br>
 ```python
 python main.py
  ```
 
 - Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+
 
 ## Цели проекта
 
